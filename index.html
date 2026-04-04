@@ -128,7 +128,8 @@ const Q=[
 {id:'rede',t:'c',q:'Qual rede social você mais consome no dia a dia?',o:['Instagram','TikTok','YouTube','Facebook','Não uso muito redes sociais']},
 {id:'seg',t:'c',q:'O que te faria sentir mais segura pra começar?',o:['Um passo a passo bem mastigado pra seguir','Modelos prontos de tudo pra copiar e colar','Alguém fazendo junto comigo nos primeiros dias','Saber exatamente quanto cobrar de cada cliente','Ver alguém ao vivo fechando um cliente pra eu entender como faz']},
 {id:'ups',t:'c',q:'Se existisse um serviço extra, qual desses você pagaria pra ter?',o:['A Raíssa me indicando o primeiro cliente','Mentoria individual com a Raíssa','Alguém revisando meu trabalho antes de entregar pro cliente','Um grupo menor com acompanhamento mais de perto','Pacote de templates profissionais prontos pra usar']},
-{id:'frase',t:'ta',q:'Completa essa frase:',ph:'Eu vou saber que valeu a pena quando...',v:{n:10,m:'Escreve um pouquinho mais, quero te conhecer de verdade 🧡'}}
+{id:'amiga',t:'ta',q:'Se uma amiga te perguntasse "por que você comprou isso?", o que você diria?',ph:'Escreve como se tivesse mandando um áudio pra ela...',v:{n:10,m:'Escreve um pouquinho mais, quero te conhecer de verdade 🧡'}},
+{id:'frase',t:'ta',q:'Completa essa frase:',ph:'Eu vou saber que valeu a pena quando...',v:{n:10,m:'Escreve um pouquinho mais, falta pouco! 🧡'}}
 ];
 const T=Q.length,L='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let c=0,a={};
@@ -161,7 +162,7 @@ function gB(){if(c>0)rQ(c-1)}
 
 function fin(){document.getElementById('qS').classList.remove('on');document.getElementById('hdr').style.display='none';document.getElementById('fS').classList.add('on');sav()}
 
-function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),...a});if(SU)fetch(SU,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e));if(GS)fetch(GS,{method:'POST',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:d}).then(r=>console.log('Sheets OK')).catch(e=>console.log('Sheets err:',e))}
+function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),amiga:a.amiga||'',...a});if(SU)fetch(SU,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e));if(GS)fetch(GS,{method:'POST',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:d}).then(r=>console.log('Sheets OK')).catch(e=>console.log('Sheets err:',e))}
 
 </script>
 </body>
