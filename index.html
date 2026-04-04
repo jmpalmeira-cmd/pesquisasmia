@@ -161,7 +161,7 @@ function gB(){if(c>0)rQ(c-1)}
 
 function fin(){document.getElementById('qS').classList.remove('on');document.getElementById('hdr').style.display='none';document.getElementById('fS').classList.add('on');sav()}
 
-function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),...a});fetch(SU,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e))}
+function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),...a});fetch(SU,{method:'POST',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e))}
 
 </script>
 </body>
