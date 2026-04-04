@@ -134,7 +134,6 @@ const Q=[
 const T=Q.length,L='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let c=0,a={};
 const SU='https://hook.us2.make.com/srm1dnmitwdccnlnx6q13ny67s4lluvi';
-const GS='https://script.google.com/macros/s/AKfycbwWILc-QchMnglocEwwArxL4Rwd6VVwQYp0UKKzm2b-Zdk-6MtFaX8YoSE3-H5O34EN7w/exec';
 
 function go(){document.getElementById('welS').classList.remove('on');document.getElementById('hdr').style.display='block';document.getElementById('qS').classList.add('on');rQ(0)}
 
@@ -162,9 +161,8 @@ function gB(){if(c>0)rQ(c-1)}
 
 function fin(){document.getElementById('qS').classList.remove('on');document.getElementById('hdr').style.display='none';document.getElementById('fS').classList.add('on');sav()}
 
-function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),amiga:a.amiga||'',...a});if(SU)fetch(SU,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e));if(GS){var f=document.createElement('form');f.method='POST';f.action=GS;f.target='gsframe';var i=document.createElement('input');i.type='hidden';i.name='data';i.value=d;f.appendChild(i);document.body.appendChild(f);f.submit();f.remove()}}
+function sav(){var d=JSON.stringify({ts:new Date().toLocaleString('pt-BR'),...a});fetch(SU,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:d}).catch(e=>console.log(e))}
 
 </script>
-<iframe name="gsframe" style="display:none"></iframe>
 </body>
 </html>
